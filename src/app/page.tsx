@@ -1,103 +1,129 @@
-import Image from "next/image";
+import Image from "next/image"
 
-export default function Home() {
+export default function netflix(){
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-black">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="relative w-screen h-screen">
+
+          {/* background image */}
+              <div
+                className="absolute inset-0 mx-auto  bg-no-repeat"
+                style = {{
+                  background : "url('/hero-image.jpg')",
+                  backgroundSize : "cover",
+                  // backgroundRepeat : "no-repeat",
+                  // filter : "brightness(30%)"
+                }} 
+              >
+              </div>
+
+              
+              {/* overlay */}
+                <div className="absolute inset-0 bg-black opacity-70"></div>
+
+
+              {/* header */}
+             <div
+               className=" w-full h-12 z-50 bg-black/50 backdrop-md"
+                style={{ boxShadow: "0 12px 20px -5px rgba(0, 0, 0, 0.7)" }}
+>
+
+                  <div className="absolute inset-0 flex justify-center">
+                      <div className="w-[85%] h-20 flex items-center justify-between">
+                        
+                         
+                         <div>
+                            <Image
+                              src="/logo1.png"
+                              alt="logo"
+                              width={180}
+                              height={180}
+                              className="text-red-800"
+                            />
+                          </div>
+
+                         <div className="relative right-10"><button className="w-[92px] h-8 bg-red-600 text-white font-bold rounded-sm text-sm">Sign Out</button></div>
+                      </div>
+                  </div></div>
+
+
+
+              <div className="absolute inset-0 font-extrabold text-white text-5xl flex justify-center items-center">
+                  <div className="flex flex-col gap-6 mt-32">
+                        <div className="text-center flex flex-col gap-4">
+                          <p>Unlimited movies, TV</p>
+                          <p>shows, and More</p>
+                        </div>
+     
+                        <div className="text-center"><p className="text-xl">Starts at Rs 250. Cancel anytime.</p></div>
+     
+                        <div className="text-center"><button className="w-[250px] h-14 bg-red-600 text-2xl font-bold rounded-md"> Finish Sing-Up  </button></div>
+
+                  </div>
+              </div> 
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+
+          <div>
+             <div className="relative w-full h-[70px]  shadow-[#101839]  overflow-hidden z-10 flex items-center bg-gradient-to-l from-[#501630] via-[#DF0E21] to-[#4B142D] justify-center rounded-t-[50%_100%] border-t-[8px] border-transparent before:content-[''] before:absolute before:inset-0 before:-mt-1 before:z-[-1] before:rounded-t-[50%_100%] before:bg-[linear-gradient(to_right,black,black,#101839,black,black_84%)]"></div>
+          </div>
+
+
+        <div>
+          
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div className="flex justify-center flex-col items-center ">
+
+          <h1 className="w-[82%] text-white text-2xl font-bold self-st">More Reasons to Join</h1>
+
+              <div className="w-[82%] h-80 bg-yellow-400 flex items-center justify-center gap-5">
+                    
+                    <div className="w-[25%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
+                        <div className="flex flex-col gap-3">
+                            <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
+                            <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                        </div>
+                        <div className="self-end"><Image src="/comp.svg" alt="1" width={66} height={66}/></div>
+                    </div>
+                    
+                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
+                        <div className="flex flex-col gap-3">
+                            <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
+                            <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                        </div>
+                        <div className="self-end"><Image src="/arrow.svg" alt="1" width={66} height={66}/></div>
+                    </div>
+                    
+                    
+                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
+                        <div className="flex flex-col gap-3">
+                            <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
+                            <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                        </div>
+                        <div className="self-end"><Image src="/scope.svg" alt="1" width={66} height={66}/></div>
+                    </div>
+                    
+                    
+                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
+                        <div className="flex flex-col gap-3">
+                            <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
+                            <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                        </div>
+                        <div className="self-end"><Image src="/msg.svg" alt="1" width={66} height={66}/></div>
+                    </div>
+              
+              </div>
+        </div>
+
+        
+
     </div>
-  );
-}
+  )
+};
