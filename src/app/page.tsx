@@ -124,7 +124,15 @@ export default function netflix(){
 
 
         <div className="w-screen h-[70vh] bg-black">
-             <div></div>
+             <div>
+                <div>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </div>
+             </div>
         </div>
 
         
