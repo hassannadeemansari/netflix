@@ -1,4 +1,10 @@
+'use client'
+import { useState } from "react"
+
 export default function Accordion(){
+  
+     const [isopenacordion , setisopenaccor] = useState(false)
+
      return (
               <div className="flex flex-col gap-0.5">
 
