@@ -126,8 +126,8 @@ export default function netflix(){
 
 
 
-         <div className="flex justify-center mx-auto mt-14"> 
-             <div className="w-[82%] min-h-screen flex flex-col gap-2.5 ">
+         <div className="flex justify-center flex-col items-center mx-auto mt-14 gap-5"> 
+             <div className="w-[82%] min-h-screen flex flex-col gap-2 ">
                   <span className="font-bold text-xl text-white">frequently Asked Question</span>
                       <Accordion />
                       <Accordion />
@@ -135,8 +135,10 @@ export default function netflix(){
                       <Accordion />
                       <Accordion />
                       <Accordion />
+         
              </div>
-        </div>
+
+<button className="w-[250px] h-14 self-start  ml-40 bg-red-600 text-2xl font-bold rounded-md"> Finish Sing-Up  </button>        </div>
 
 
 
