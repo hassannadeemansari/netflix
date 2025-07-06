@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Accordion from "./components/accordian"
 
 export default function netflix(){
   return (
@@ -25,7 +26,7 @@ export default function netflix(){
 
               {/* header */}
              <div
-               className=" w-full h-12 z-50 bg-black/50 backdrop-md"
+               className=" relative w-full h-12 z-50 bg-black/50 backdrop-sm"
                 style={{ boxShadow: "0 12px 20px -5px rgba(0, 0, 0, 0.7)" }}
 >
 
@@ -67,7 +68,7 @@ export default function netflix(){
 
 
           <div>
-             <div className="relative w-full h-[70px]  shadow-[#101839]  overflow-hidden z-10 flex items-center bg-gradient-to-l from-[#501630] via-[#DF0E21] to-[#4B142D] justify-center rounded-t-[50%_100%] border-t-[8px] border-transparent before:content-[''] before:absolute before:inset-0 before:-mt-1 before:z-[-1] before:rounded-t-[50%_100%] before:bg-[linear-gradient(to_right,black,black,#101839,black,black_84%)]"></div>
+             <div className="relative w-full h-[70px]   overflow-hidden z-10 flex items-center bg-gradient-to-l from-[#501630] via-[#DF0E21] to-[#4B142D] justify-center rounded-t-[50%_100%] border-t-[5px] border-transparent before:content-[''] before:absolute before:inset-0 before:-mt-1 before:z-[-1] before:rounded-t-[50%_100%] before:bg-[linear-gradient(to_right,black,black,#101839,black,black_96%)]"></div>
           </div>
 
 
@@ -83,18 +84,18 @@ export default function netflix(){
 
           <h1 className="w-[82%] text-white text-2xl font-bold self-st">More Reasons to Join</h1>
 
-              <div className="w-[82%] h-80 bg-yellow-400 flex items-center justify-center gap-5">
+              <div className="w-[82%] h-80 flex items-center justify-center gap-5">
                     
-                    <div className="w-[25%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
-                        <div className="flex flex-col gap-3">
+                    <div className="w-[24%] h-70 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-16">
+                        <div className="flex flex-col gap-3 mt-2">
                             <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
                             <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                         </div>
                         <div className="self-end"><Image src="/comp.svg" alt="1" width={66} height={66}/></div>
                     </div>
                     
-                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
-                        <div className="flex flex-col gap-3">
+                    <div className="w-[24%] h-70 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-16">
+                        <div className="flex flex-col gap-3 mt-2">
                             <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
                             <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                         </div>
@@ -102,8 +103,8 @@ export default function netflix(){
                     </div>
                     
                     
-                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
-                        <div className="flex flex-col gap-3">
+                    <div className="w-[24%] h-70 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-16">
+                        <div className="flex flex-col gap-3 mt-2">
                             <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
                             <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                         </div>
@@ -111,8 +112,8 @@ export default function netflix(){
                     </div>
                     
                     
-                    <div className="w-[24%] h-60 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-12">
-                        <div className="flex flex-col gap-3">
+                    <div className="w-[24%] h-70 bg-gradient-to-br from-[#1A2144] via-[#1E172D] to-[#210E18] rounded-2xl p-4 flex flex-col gap-16">
+                        <div className="flex flex-col gap-3 mt-2">
                             <p className="text-white text-2xl font-bold">Enjoy on your TV</p>
                             <p className="text-gray-400 text-sm font-semibold">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                         </div>
@@ -123,20 +124,28 @@ export default function netflix(){
         </div>
 
 
-        <div className="w-screen h-[70vh] bg-black">
-             <div>
-                <div>
-                    <li>industry</li>
-                    <li>fees</li>
-                    <li>monthly</li>
-                    <li>weakly</li>
-                    <li></li>
-                </div>
+
+
+         <div className="flex justify-center mx-auto mt-14"> 
+             <div className="w-[82%] min-h-screen flex flex-col gap-2.5 ">
+                  <span className="font-bold text-xl text-white">frequently Asked Question</span>
+                      <Accordion />
+                      <Accordion />
+                      <Accordion />
+                      <Accordion />
+                      <Accordion />
+                      <Accordion />
              </div>
         </div>
+
+
+
 
         
 
     </div>
   )
 };
+
+
+
