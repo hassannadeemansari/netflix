@@ -16,26 +16,26 @@ export default function Accordion() {
         <div key={e}>
           <div
             onClick={() => toggle(e)}
-            className="h-21 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white text-2xl flex justify-between items-center p-5"
+            className="h-21 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white sm:text-2xl text-lg flex justify-between items-center p-5"
           >
             <span>{i.question}</span>
             {openIndex === e ? (
               <img
                 src="/cross.png"
                 alt="close"
-                className="h-14 w-auto filter brightness-0 invert"
+                className="sm:h-14 h-10 w-auto filter brightness-0 invert"
               />
             ) : (
               <img
                 src="/Add.png"
                 alt="open"
-                className="h-12 w-auto filter brightness-0 invert"
+                className="sm:h-12 h-8 w-auto filter brightness-0 invert"
               />
             )}
           </div>
 
           {openIndex === e && (
-            <p className="text-white text-2xl p-7 bg-[#2D2D2D]">{i.answere}</p>
+            <p className="text-white sm:text-2xl text-lg p-7 bg-[#2D2D2D]">{i.answere}</p>
           )}
         </div>
       ))}
