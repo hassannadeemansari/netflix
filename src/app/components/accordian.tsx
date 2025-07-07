@@ -1,40 +1,44 @@
 'use client'
+
 import { useState } from "react"
+import { Faqs } from "./question"
 
-export default function Accordion(){
-  
-     const [isopenacordion , setopenaccor] = useState(false)
+export default function Accordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-     function toggle(){
-          setopenaccor(!isopenacordion)
-     }
+  function toggle(index: number) {
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
-     return (
-              <div className="flex flex-col gap-0.5">
+  return (
+    <div className="flex flex-col gap-0.5">
+      {Faqs.map((i, e) => (
+        <div key={e}>
+          <div
+            onClick={() => toggle(e)}
+            className="h-21 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white text-2xl flex justify-between items-center p-5"
+          >
+            <span>{i.question}</span>
+            {openIndex === e ? (
+              <img
+                src="/cross.png"
+                alt="close"
+                className="h-14 w-auto filter brightness-0 invert"
+              />
+            ) : (
+              <img
+                src="/Add.png"
+                alt="open"
+                className="h-12 w-auto filter brightness-0 invert"
+              />
+            )}
+          </div>
 
-               
-                  <p onClick={toggle} className="h-20 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white text-2xl  flex justify-between items-center p-5">
-                       <span>What is Netflix?</span>
-
-                      {isopenacordion ? ( 
-                       <img src="/cross.png" alt="add" className="h-14 w-auto filter brightness-0 invert" />
-                       
-                      ):(
-                       
-                       <img src="/Add.png" alt="add" className="h-12 w-auto filter brightness-0 invert" />
-                    
-                      )}
-                  
-                  </p>
-               {isopenacordion && (
-                  <p className="text-white text-2xl p-7 bg-[#2D2D2D]">
-                     Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.<br/>
-                       <br/>
-                       You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
-                  </p>
-               )}
-
-
-               </div>
-     )
+          {openIndex === e && (
+            <p className="text-white text-2xl p-7 bg-[#2D2D2D]">{i.answere}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  )
 }

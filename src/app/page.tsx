@@ -130,11 +130,6 @@ export default function netflix(){
              <div className="w-[82%] min-h-screen flex flex-col gap-2 ">
                   <span className="font-bold text-xl text-white">frequently Asked Question</span>
                       <Accordion />
-                      <Accordion />
-                      <Accordion />
-                      <Accordion />
-                      <Accordion />
-                      <Accordion />
          
              </div>
 
