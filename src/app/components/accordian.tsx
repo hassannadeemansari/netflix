@@ -11,7 +11,7 @@ export default function Accordion() {
   }
 
   return (
-    <div className="flex flex-col gap-0.5">
+    <div className="flex flex-col gap-0.5 md:gap-2.5">
       {Faqs.map((i, e) => (
         <div key={e}>
           <div
