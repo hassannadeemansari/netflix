@@ -127,7 +127,7 @@ export default function netflix(){
 
 
          <div className="flex justify-center flex-col items-center mx-auto mt-14 gap-5"> 
-             <div className="sm:w-[82%] w-[88%] h-auto flex flex-col gap-2 ">
+             <div className="sm:w-[82%] w-[88%] h-auto flex flex-col gap-2  ">
                   <span className="font-bold text-xl text-white">frequently Asked Question</span>
                       <Accordion />
          
@@ -139,7 +139,7 @@ export default function netflix(){
 
 
     {/* footer */}
-          <div className="sm:w-[80%] w-[92%] sm:h-[80vh] h-auto    text-[#AFAFAF] flex md:flex-row flex-col justify-evenly md:items-center p-8">
+          <div className="sm:w-[80%] w-[92%] md:h-[80vh] h-auto    text-[#AFAFAF] flex md:flex-row flex-col justify-evenly md:items-center p-8">
              
                 <div className="flex flex-col gap-6 underline">
                      <span>Questions? Contact Us.</span>
