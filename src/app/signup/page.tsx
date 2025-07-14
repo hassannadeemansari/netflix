@@ -2,46 +2,45 @@ import Image from "next/image"
 
 export default function Signup(){
     return(
-       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-      <div className="absolute top-4 right-4">
-        <a href="/login" className="text-gray-700 hover:text-gray-900 font-medium">Sign In</a>
-      </div>
-      <div className="mb-8">
-        <Image src="/logo1.png" alt="Netflix Logo" width={200} height={50} />
-      </div>
-      <div className="w-full max-w-md p-6">
-        <div className="text-center mb-6">
-          <span className="inline-flex items-center justify-center w-10 h-10 bg-red-100 rounded-full">
-            <span className="text-red-500 text-xl font-bold">✔</span>
-          </span>
-          <p className="text-gray-600 mt-2">STEP 1 OF 3</p>
-          <h2 className="text-2xl font-bold text-gray-900 mt-2">Choose your plan.</h2>
-        </div>
-        <div className="space-y-4">
-          <label className="flex items-start">
-            <input type="radio" name="plan" className="form-radio text-red-500 mt-1" defaultChecked />
-            <div className="ml-3">
-              <p className="text-gray-900">No commitments, cancel anytime.</p>
-            </div>
-          </label>
-          <label className="flex items-start">
-            <input type="radio" name="plan" className="form-radio text-red-500 mt-1" />
-            <div className="ml-3">
-              <p className="text-gray-900">Everything on Netflix for one low price.</p>
-            </div>
-          </label>
-          <label className="flex items-start">
-            <input type="radio" name="plan" className="form-radio text-red-500 mt-1" />
-            <div className="ml-3">
-              <p className="text-gray-900">No ads and no extra fees. Ever.</p>
-            </div>
-          </label>
-        </div>
-        <button className="w-full bg-red-600 text-white py-3 mt-6 rounded hover:bg-red-700 transition duration-200">
-          Next
-        </button>
-      </div>
-    </div>
- 
+       <div>
+           
+           <div className="w-screen ">
+               <nav className="w-full flex justify-between items-center pl-6 pr-12">
+                   
+                   <img
+                     src="/logo1.png"
+                     alt="logo"
+                     className="h-24 w-auto"
+                   />
+
+                   <div>
+                       <button className="text-md font-bold">Sign Up</button>
+                   </div>
+
+               </nav><hr className="h-0.5 text-gray-200"/>
+           </div>
+
+           <div className="w-screen h-screen flex justify-center items-center">
+               <div className=" max-w-md w-full flex flex-col items-center gap-5">
+                     <div className="flex flex-col items-center gap-1">
+                        <span><img src="/circle.png" alt="icon" className="h-12 w-auto" /></span>
+                        <p className="text-sm text-gray-300 mt-5">STEP 1 OF 3</p>
+                        <p className="text-4xl text-gray-700 ">Choose Your plan.</p>
+                     </div>
+                     <div className="max-w-90 w-full  p-5 flex flex-col gap-3">
+                        <div className="flex text-xl items-end gap-3"><span><img src="tick.png" alt="tick" className="h-10 w-auto" /></span><p>No commitments, cancel anytime.</p></div>
+                        <div className="flex text-xl items-center gap-3"><span><img src="tick.png" alt="tick" className="h-10 w-auto" /></span><p>Everything on Netflix for one low price.</p></div>
+                        <div className="flex text-xl items-center gap-3"><span><img src="tick.png" alt="tick" className="h-10 w-auto" /></span><p> No ads and no extra fees. Ever.</p></div>
+                     </div>
+                     <div className="w-full flex justify-center">
+                        <button className=" w-[81%] p-6 text-white text-2xl font-bold bg-red-600 rounded-lg text-center">
+                            Next
+                        </button>
+                     </div>
+               </div>
+           </div>
+
+
+       </div>
     )
 }
