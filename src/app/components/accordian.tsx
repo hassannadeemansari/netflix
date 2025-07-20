@@ -16,7 +16,7 @@ export default function Accordion() {
         <div key={e}>
           <div
             onClick={() => toggle(e)}
-            className="h-21 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white sm:text-2xl text-lg flex justify-between items-center p-5"
+            className="h-21 w-full bg-[#2D2D2D] hover:bg-[#414141] transition-all duration-300 cursor-pointer text-white sm:text-2xl text-lg flex justify-between items-center p-5 gap-0.5"
           >
             <span>{i.question}</span>
             {openIndex === e ? (
